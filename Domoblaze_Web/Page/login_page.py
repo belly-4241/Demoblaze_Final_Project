@@ -9,6 +9,8 @@ class LoginPage(Login_Locator):
     def _init_(self, driver):
         self.driver = driver
 
+
+
     def open(self):
         self.driver = webdriver.Chrome()
         self.driver.get(self.DEMOBLAZE)
@@ -26,10 +28,12 @@ class LoginPage(Login_Locator):
         self.driver.implicitly_wait(10)
         # menu = " //body/nav[@id='narvbarx']/div[@id='navbarExample']/ul[1]"
         # self.driver.find_element(By.XPATH, self.LOGIN).click()
+
     def Login_Username(self):
         self.driver.find_element(By.XPATH, self.LOGIN_USERNAME).clear()
         self.driver.find_element(By.XPATH, self.LOGIN_USERNAME).send_keys("belay")
         sleep(2)
+
     def Login_Password(self):
         self.driver.find_element(By.XPATH, self.LOGIN_PASSWORD).clear()
         self.driver.find_element(By.XPATH, self.LOGIN_PASSWORD).send_keys("belay")
@@ -56,9 +60,10 @@ class LoginPage(Login_Locator):
         self.driver.find_element(By.XPATH, self.LOGIN_USERNAME).clear()
         self.driver.find_element(By.XPATH, self.LOGIN_USERNAME).send_keys("12345")
         sleep(2)
+
+    @property
     def Switch_Alert(self):
-        self.driver.switch_to.alert.accept()
-        sleep(2)
+        return self.driver.switch_to.alert.text
     def Log_Out(self):
         self.driver.find_element(By.XPATH, self.LOGOUT).click()
         sleep(2)

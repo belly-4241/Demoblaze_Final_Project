@@ -16,6 +16,7 @@ class Test_Login(LoginPage):
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
+
     @allure.step
     @allure.description("")
     def test_login_username_empty(self):
@@ -25,7 +26,8 @@ class Test_Login(LoginPage):
         login.Username_Empty()
         login.Login_Password()
         login.Login_Button()
-        login.Switch_Alert()
+        CHECK = login.Switch_Alert
+        assert "Please fill out Username and Password."==CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -38,7 +40,8 @@ class Test_Login(LoginPage):
         login.Login_Username()
         login.Password_Empty()
         login.Login_Button()
-        login.Switch_Alert()
+        CHECK = login.Switch_Alert
+        assert "Please fill out Username and Password." == CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -51,7 +54,8 @@ class Test_Login(LoginPage):
         login.UserName_Number()
         login.Login_Password()
         login.Login_Button()
-        login.Switch_Alert()
+        CHECK = login.Switch_Alert
+        assert 'Wrong password.' == CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -64,7 +68,8 @@ class Test_Login(LoginPage):
         login.Login_Username()
         login.Password_Number()
         login.Login_Button()
-        login.Switch_Alert()
+        CHECK = login.Switch_Alert
+        assert 'Please fill out Username and Password.' == CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -77,7 +82,8 @@ class Test_Login(LoginPage):
         login.UserName_Number()
         login.Password_Number()
         login.Login_Button()
-        login.Switch_Alert()
+        CHECK = login.Switch_Alert
+        assert 'Please fill out Username and Password.' == CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -95,10 +101,28 @@ class Test_Login(LoginPage):
     @pytest.mark.sanity
     @allure.step
     @allure.description("")
-    def test_logout_link(self):
+    def test_login_link(self):
         login = LoginPage()
         login.open()
         login.Login_link()
-        login.Login_Username()
-        login.Login_Password()
+        login.Username_Empty()
+        login.Password_Empty()
         login.Login_Button()
+    def test_login_empty_password_invalid_username(self):
+        login = LoginPage()
+        login.open()
+        login.Login_link()
+        login.UserName_Number()
+        login.Password_Empty()
+        login.Login_Button()
+        CHECK = login.Switch_Alert
+        assert 'Please fill out Username and Password.' == CHECK
+    def test_login_invalid_password_empty_username(self):
+        login = LoginPage()
+        login.open()
+        login.Login_link()
+        login.Username_Empty()
+        login.Password_Number()
+        login.Login_Button()
+        CHECK = login.Switch_Alert
+        assert 'Please fill out Username and Password.' == CHECK

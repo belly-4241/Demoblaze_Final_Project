@@ -13,6 +13,9 @@ class Test_Contact():
         contact.Contact_Email()
         contact.Contact_Name()
         contact.Contact_Message()
+        contact.Send_Button()
+        CHECK = contact.Switch_Alert
+        assert 'Thanks for the message!!' == CHECK
 
 
     @allure.severity(allure.severity_level.MINOR)
@@ -26,6 +29,9 @@ class Test_Contact():
         contact.Contact_Email()
         contact.Contact_Invalid_Name()
         contact.Contact_Message()
+        contact.Send_Button()
+        CHECK = contact.Switch_Alert
+        assert 'Thanks for the mes' == CHECK
 
 
     @allure.severity(allure.severity_level.MINOR)
@@ -39,6 +45,9 @@ class Test_Contact():
         contact.Contact_Email()
         contact.Contact_Invalid_Name()
         contact.Contact_Message()
+        contact.Send_Button()
+        CHECK = contact.Switch_Alert
+        assert 'Thanks fore mege!!' == CHECK
 
 
     @allure.severity(allure.severity_level.MINOR)
@@ -52,6 +61,9 @@ class Test_Contact():
         contact.Contact_Email()
         contact.Contact_Name()
         contact.Contact_Empty_Message()
+        contact.Send_Button()
+        CHECK = contact.Switch_Alert
+        assert 'Thanks foessage!!' == CHECK
 
 
     @allure.severity(allure.severity_level.MINOR)
@@ -65,6 +77,9 @@ class Test_Contact():
         contact.Contact_Empty_Email()
         contact.Contact_Name()
         contact.Contact_Message()
+        contact.Send_Button()
+        CHECK = contact.Switch_Alert
+        assert 'Thanks for t meage!!' == CHECK
 
 
     @allure.severity(allure.severity_level.MINOR)
@@ -78,6 +93,9 @@ class Test_Contact():
         contact.Contact_Email()
         contact.Contact_Empty_Name()
         contact.Contact_Message()
+        contact.Send_Button()
+        CHECK = contact.Switch_Alert
+        assert 'Thanks for t mge!!' == CHECK
 
 
     @allure.severity(allure.severity_level.MINOR)
@@ -91,6 +109,9 @@ class Test_Contact():
         contact.Contact_Empty_Email()
         contact.Contact_Empty_Name()
         contact.Contact_Message()
+        contact.Send_Button()
+        CHECK = contact.Switch_Alert
+        assert 'Thanks fo msage!!' == CHECK
 
 
     @allure.severity(allure.severity_level.MINOR)
@@ -104,6 +125,9 @@ class Test_Contact():
         contact.Contact_Empty_Email()
         contact.Contact_Empty_Name()
         contact.Contact_Empty_Message()
+        contact.Send_Button()
+        CHECK = contact.Switch_Alert
+        assert 'Thanks for tssage!!' == CHECK
 
 
     @allure.severity(allure.severity_level.MINOR)
@@ -116,3 +140,4 @@ class Test_Contact():
         contact.Contact_Link()
         contact.Contact_Email()
         contact.Contact_Name()
+        contact.Contact_Close_Button()

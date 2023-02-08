@@ -18,7 +18,8 @@ class Test_Cart(CartPage):
         cart.Month()
         cart.Year()
         cart.Purchase_Button()
-        cart.Assert()
+        cart.assert_ok()
+
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -36,7 +37,8 @@ class Test_Cart(CartPage):
         cart.Month()
         cart.Year()
         cart.Purchase_Button()
-        cart.Switch_Alert()
+        CHECK = cart.Switch_Alert
+        assert "Please fill out Name and Creditcard." == CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -54,7 +56,8 @@ class Test_Cart(CartPage):
         cart.Month()
         cart.Year()
         cart.Purchase_Button()
-        cart.Assert()
+        CHECK = cart.Switch_Alert
+        assert "Please fill out Usern Password." == CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -72,7 +75,8 @@ class Test_Cart(CartPage):
         cart.Month()
         cart.Year()
         cart.Purchase_Button()
-        cart.Assert()
+        CHECK = cart.Switch_Alert
+        assert "Please fill out Userd Password." == CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -90,7 +94,8 @@ class Test_Cart(CartPage):
         cart.Month()
         cart.Year()
         cart.Purchase_Button()
-        cart.Switch_Alert()
+        CHECK = cart.Switch_Alert
+        assert "Please fill out Userand Password." == CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -108,7 +113,7 @@ class Test_Cart(CartPage):
         cart.Month_Empty()
         cart.Year()
         cart.Purchase_Button()
-        cart.Assert()
+        cart.assert_ok()
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -126,7 +131,7 @@ class Test_Cart(CartPage):
         cart.Month()
         cart.Year_Empty()
         cart.Purchase_Button()
-        cart.Assert()
+        cart.assert_ok()
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -161,7 +166,8 @@ class Test_Cart(CartPage):
         cart.Month()
         cart.Year()
         cart.Purchase_Button()
-        cart.Switch_Alert()
+        CHECK = cart.Switch_Alert
+        assert "Please fill out Username and Password." == CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -179,7 +185,8 @@ class Test_Cart(CartPage):
         cart.Month()
         cart.Year()
         cart.Purchase_Button()
-        cart.Switch_Alert()
+        CHECK = cart.Switch_Alert
+        assert "Please fill out Username and Password." == CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -197,7 +204,8 @@ class Test_Cart(CartPage):
         cart.Month()
         cart.Year()
         cart.Purchase_Button()
-        cart.Switch_Alert()
+        CHECK = cart.Switch_Alert
+        assert "Please fill out Username and Password." == CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -215,7 +223,8 @@ class Test_Cart(CartPage):
         cart.Month_Empty()
         cart.Year()
         cart.Purchase_Button()
-        cart.Switch_Alert()
+        CHECK = cart.Switch_Alert
+        assert "Please fill out Username and Password." == CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -233,7 +242,8 @@ class Test_Cart(CartPage):
         cart.Month()
         cart.Year_Empty()
         cart.Purchase_Button()
-        cart.Switch_Alert()
+        CHECK = cart.Switch_Alert
+        assert "Please fill out Username and Password." == CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -251,7 +261,8 @@ class Test_Cart(CartPage):
         cart.Month()
         cart.Year()
         cart.Purchase_Button()
-        cart.Assert()
+        CHECK = cart.Switch_Alert
+        assert "Please fill out Username and Password." == CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -269,7 +280,8 @@ class Test_Cart(CartPage):
         cart.Month()
         cart.Year()
         cart.Purchase_Button()
-        cart.Switch_Alert()
+        CHECK = cart.Switch_Alert
+        assert "Please fill out Username and Password." == CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -287,7 +299,8 @@ class Test_Cart(CartPage):
         cart.Month_Empty()
         cart.Year()
         cart.Purchase_Button()
-        cart.Assert()
+        CHECK = cart.Switch_Alert
+        assert "Please fill out Username and Password." == CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -305,7 +318,8 @@ class Test_Cart(CartPage):
         cart.Month()
         cart.Year_Empty()
         cart.Purchase_Button()
-        cart.Assert()
+        CHECK = cart.Switch_Alert
+        assert "Please fill out Name and Creditcard." == CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -323,7 +337,8 @@ class Test_Cart(CartPage):
         cart.Month()
         cart.Year()
         cart.Purchase_Button()
-        cart.Switch_Alert()
+        CHECK = cart.Switch_Alert
+        assert "Please fill out Name and Creditcard." == CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -341,7 +356,8 @@ class Test_Cart(CartPage):
         cart.Month_Empty()
         cart.Year()
         cart.Purchase_Button()
-        cart.Assert()
+        CHECK = cart.Switch_Alert
+        assert "Please fill out Username and Password." == CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -359,7 +375,8 @@ class Test_Cart(CartPage):
         cart.Month()
         cart.Year_Empty()
         cart.Purchase_Button()
-        cart.Assert()
+        CHECK = cart.Switch_Alert
+        assert "Please fill out Username and Password." == CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -377,7 +394,8 @@ class Test_Cart(CartPage):
         cart.Month_Empty()
         cart.Year()
         cart.Purchase_Button()
-        cart.Switch_Alert()
+        CHECK = cart.Switch_Alert
+        assert "Please fill out Name and Creditcard." == CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -395,4 +413,5 @@ class Test_Cart(CartPage):
         cart.Month()
         cart.Year_Empty()
         cart.Purchase_Button()
-        cart.Switch_Alert()
+        CHECK = cart.Switch_Alert
+        assert "Please fill out Name and Creditcard." == CHECK

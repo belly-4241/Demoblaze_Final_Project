@@ -35,7 +35,8 @@ class Test_Home(HomePage):
         homepage.Month()
         homepage.Year()
         homepage.Purchase_Button()
-        homepage.Assert()
+        CHECK = homepage.SwitchAlert
+        assert "Please fill out Username and Password." == CHECK
 
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.sanity
@@ -122,5 +123,25 @@ class Test_Home(HomePage):
         homepage.open()
         homepage.homeLink()
         homepage.test_Home_Previous_Button()
+    def test_Home_link(self):
+        homepage = HomePage()
+        homepage.open()
+        homepage.homeLink()
+    def test_Cart_link(self):
+        homepage = HomePage()
+        homepage.open()
+        homepage.Cart_ink()
+    def test_contact_link(self):
+        homepage = HomePage()
+        homepage.open()
+        homepage.Contact()
+    def test_login_link(self):
+        homepage = HomePage()
+        homepage.open()
+        homepage.Login()
+    def test_about_link(self):
+        homepage = HomePage()
+        homepage.open()
+        homepage.About()
 
 

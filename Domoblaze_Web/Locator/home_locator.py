@@ -3,7 +3,12 @@
 class Home_Locator:
     DEMOBLAZE = "https://www.demoblaze.com/"
     URL = "//body/nav[@id='narvbarx']/div[@id='navbarExample']/ul[1]"
+    CART_LINK = "//a[@id='cartur']"
     HOME = "//body/nav[@id='narvbarx']/div[@id='navbarExample']/ul[1]/li[1]/a[1]"
+    CONTACT = "//a[contains(text(),'Contact')]"
+    LOGIN = "//a[@id='login2']"
+    SIGNUP = "//a[@id='signin2']"
+    ABOUT_US_LINK = "//a[contains(text(),'About us')]"
     PHONE = "//a[contains(text(),'Phones')]"
     LAPTOP = "//a[contains(text(),'Laptops')]"
     MACBOOK_AIR = "//a[contains(text(),'MacBook air')]"

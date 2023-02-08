@@ -42,9 +42,10 @@ class Contact(Contact_Locator):
     def Send_Button(self):
         self.driver.find_element(By.XPATH, self.SEND_BUTTON).click()
         sleep(2)
+
+    @property
     def Switch_Alert(self):
-        self.driver.switch_to.alert.accept()
-        sleep(2)
+        return self.driver.switch_to.alert.text
     def Contact_Invalid_Name(self):
         self.driver.find_element(By.XPATH, self.NAME).clear()
         self.driver.find_element(By.XPATH, self.NAME).send_keys("12234")

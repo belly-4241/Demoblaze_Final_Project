@@ -21,7 +21,7 @@ class CartPage(Cart_Locator):
             if n.text == 'Cart':
                 n.click()
                 break
-        self.driver.implicitly_wait(10)
+        self.driver.implicitly_wait(5)
         # self.driver.find_element(By.XPATH, self.CART).click()
         # sleep(2)
     def OrederPlace_button(self):
@@ -61,9 +61,11 @@ class CartPage(Cart_Locator):
     def Assert(self):
         res = self.driver.find_element(By.XPATH, self.ASSERT).text
         assert res=="OK"
-    def SwitchAlert(self):
-        self.driver.switch_to.alert.accept()
         sleep(2)
+
+    @property
+    def SwitchAlert2(self):
+        return self.driver.switch_to.alert.accept()
     def Delete(self):
         self.driver.find_element(By.XPATH, self)
     def NameField_Empty(self):
@@ -93,8 +95,17 @@ class CartPage(Cart_Locator):
     def Close_Button(self):
         self.driver.find_element(By.XPATH, self.CLOSE).click()
         sleep(2)
-    def Switch_Alert(self):
-        self.driver.switch_to.alert.accept()
-        sleep(2)
 
+    @property
+    def Switch_Alert(self):
+        return self.driver.switch_to.alert.text
+
+
+    def assert_ok(self):
+        tex = self.driver.find_element(By.XPATH, "//button[contains(text(),'OK')]").text
+        assert tex=='OK'
+
+    @property
+    def Switch_Alert2(self):
+        return self.driver.switch_to.alert.text
 

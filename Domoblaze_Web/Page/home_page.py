@@ -24,8 +24,56 @@ class HomePage(Home_Locator):
                 n.click()
                 break
         self.driver.implicitly_wait(10)
-        # self.driver.find_element(By.XPATH, self.HOME).click()
-        # sleep(2)
+    def Cart_ink(self):
+        menu = self.URL
+        men = 'li'
+        me = self.driver.find_element(By.XPATH, menu)
+        m = me.find_elements(By.TAG_NAME, men)
+        for n in m:
+            if n.text == 'Cart':
+                n.click()
+                break
+        self.driver.implicitly_wait(10)
+    def Sign_up(self):
+        menu = self.URL
+        men = 'li'
+        me = self.driver.find_element(By.XPATH, menu)
+        m = me.find_elements(By.TAG_NAME, men)
+        for n in m:
+            if n.text == 'Sign up':
+                n.click()
+                break
+        self.driver.implicitly_wait(10)
+    def Contact(self):
+        menu = self.URL
+        men = 'li'
+        me = self.driver.find_element(By.XPATH, menu)
+        m = me.find_elements(By.TAG_NAME, men)
+        for n in m:
+            if n.text == 'Contact':
+                n.click()
+                break
+        self.driver.implicitly_wait(10)
+    def About(self):
+        menu = self.URL
+        men = 'li'
+        me = self.driver.find_element(By.XPATH, menu)
+        m = me.find_elements(By.TAG_NAME, men)
+        for n in m:
+            if n.text == 'About us':
+                n.click()
+                break
+        self.driver.implicitly_wait(10)
+    def Login(self):
+        menu = self.URL
+        men = 'li'
+        me = self.driver.find_element(By.XPATH, menu)
+        m = me.find_elements(By.TAG_NAME, men)
+        for n in m:
+            if n.text == 'Login':
+                n.click()
+                break
+        self.driver.implicitly_wait(10)
     def Phone_categories(self):
         self.driver.find_element(By.XPATH, self.PHONE).click()
         sleep(2)
@@ -56,9 +104,10 @@ class HomePage(Home_Locator):
     def AddTocart(self):
         self.driver.find_element(By.XPATH, self.ADDTO_CART).click()
         sleep(2)
+
+    @property
     def SwitchAlert(self):
-        self.driver.switch_to.alert.accept()
-        sleep(2)
+        return self.driver.switch_to.alert.text
     def Cart(self):
         self.driver.find_element(By.XPATH, self.CART).click()
         sleep(2)

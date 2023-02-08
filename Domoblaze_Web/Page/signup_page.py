@@ -25,36 +25,45 @@ class SignUpPage(SignUp_Locator):
                 n.click()
                 break
         self.driver.implicitly_wait(10)
-    def SignUp_UserName(self):
+    def SignUp_UserName_number(self):
         self.driver.find_element(By.XPATH, self.SIGNUP_USERNAME).clear()
-        self.driver.find_element(By.XPATH, self.SIGNUP_USERNAME).send_keys("belay")
+        self.driver.find_element(By.XPATH, self.SIGNUP_USERNAME).send_keys("98987764344")
         sleep(2)
-    def SignUp_Password(self):
+    def SignUp_Password_number(self):
         self.driver.find_element(By.XPATH, self.SIGNUP_PASSWORD).clear()
-        self.driver.find_element(By.XPATH, self.SIGNUP_PASSWORD).send_keys("1234")
+        self.driver.find_element(By.XPATH, self.SIGNUP_PASSWORD).send_keys("12341234")
         sleep(2)
     def SignUp_Button(self):
         self.driver.find_element(By.XPATH, self.SIGNUP_BUTTON).click()
         sleep(2)
-    def SignUp_UserName_Empty(self):
+    def SignUp_UserName_letters(self):
         self.driver.find_element(By.XPATH, self.SIGNUP_USERNAME).clear()
         self.driver.find_element(By.XPATH, self.SIGNUP_USERNAME).send_keys("")
         sleep(2)
-    def SignUp_Password_Empty(self):
+    def SignUp_Password_letters(self):
         self.driver.find_element(By.XPATH, self.SIGNUP_PASSWORD).clear()
         self.driver.find_element(By.XPATH, self.SIGNUP_PASSWORD).send_keys("")
         sleep(2)
-    def SignUp_UserName_Number(self):
+    def SignUp_UserName_empty(self):
         self.driver.find_element(By.XPATH, self.SIGNUP_USERNAME).clear()
-        self.driver.find_element(By.XPATH, self.SIGNUP_USERNAME).send_keys("1234")
+        self.driver.find_element(By.XPATH, self.SIGNUP_USERNAME).send_keys("1234533")
         sleep(2)
-    def SignUp_Password_Letters(self):
+    def SignUp_Password_empty(self):
         self.driver.find_element(By.XPATH, self.SIGNUP_PASSWORD).clear()
         self.driver.find_element(By.XPATH, self.SIGNUP_PASSWORD).send_keys("belay")
         sleep(2)
+
+    @property
     def Switch_Alert(self):
-        self.driver.switch_to.alert.accept()
-        sleep(2)
+        return self.driver.switch_to.alert.text
     def SignUp_Close_Button(self):
         self.driver.find_element(By.XPATH, self.CLOSE_BUTTON).click()
+        sleep(2)
+    def SignUp_UserName_exit(self):
+        self.driver.find_element(By.XPATH, self.SIGNUP_USERNAME).clear()
+        self.driver.find_element(By.XPATH, self.SIGNUP_USERNAME).send_keys("1234533")
+        sleep(2)
+    def SignUp_Password_exit(self):
+        self.driver.find_element(By.XPATH, self.SIGNUP_PASSWORD).clear()
+        self.driver.find_element(By.XPATH, self.SIGNUP_PASSWORD).send_keys("belay")
         sleep(2)
